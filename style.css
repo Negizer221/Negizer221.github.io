@@ -44,8 +44,8 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
     grid-template-areas: 
-    'instagram facebook spotify'
-    'youtube github website'; 
+    'linkedin instagram facebook spotify'
+    'chat youtube github website'; 
     gap: 10px;  
     margin-top: 25px;
 }  
@@ -70,7 +70,11 @@ body {
 
 .linkbio h3 p {
     font-size: 1.1em;
-}  
+}   
+.ld:hover :nth-child(1){
+color: rgb(10, 102, 194);
+transform: scale(1.02);
+}
 .i:hover :nth-child(1) {
 color: rgb(129, 52, 175); 
 transform: scale(1.02);
@@ -83,6 +87,10 @@ transform: scale(1.02);
 color: rgb(30 215 96);
 transform: scale(1.02);  
 } 
+.ln:hover :nth-child(1){
+color: rgb(0, 185, 0);
+transform: scale(1.02);
+}
 .y:hover :nth-child(1) {
 color: rgb(255 0 0);
 transform: scale(1.02);
@@ -98,7 +106,9 @@ transform: scale(1.02);
 
 
 /* BIO GRID AREA */ 
-
+.ld {
+    grid-area: linkedin;
+}
 .i {
     grid-area: instagram;
 }
@@ -108,6 +118,9 @@ transform: scale(1.02);
 .s {
     grid-area: spotify;
 } 
+.ln{
+    grid-area: chat;
+}
 .y {
     grid-area: youtube;
 } 
@@ -122,9 +135,11 @@ transform: scale(1.02);
 @media (max-width: 700px) {
     .linkbio {
         grid-template-areas: 
+        'linkedin'
         'instagram' 
         'facebook' 
         'spotify'
+        'chat'
         'youtube' 
         'github' 
         'website'; 
