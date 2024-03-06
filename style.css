@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0; 
+}
+
+body {
+    margin: 30px;
+    background-color: rgb(230, 230, 230); 
+    font-size: 18px; 
+    font-family: 'Silkscreen', Arial, Helvetica, sans-serif;
+} 
+.container {
+    display: grid;
+}
+
+.hero {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    
+} 
+
+
+.title   {
+    text-align: center; 
+    margin-top: 10px; 
+    color: rgb(34, 34, 34); 
+}  
+
+.title p {
+    font-size: 1.3em;
+}
+
+.hero img { 
+    display: flex;
+    max-width: 40%;   
+    height: auto;
+    border-radius: 50%;
+}  
+
+/* BIO LINK */
+
+.linkbio {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+    grid-template-areas: 
+    'linkedin instagram facebook spotify'
+    'chat youtube github website'; 
+    gap: 10px;  
+    margin-top: 25px;
+}  
+
+.bio a {
+    display: block;
+    color: rgb(34, 34, 34); 
+    text-decoration: none;
+}
+
+.bio {
+    background-color: white;
+    text-align: center; 
+    padding: 10px;
+    box-sizing: border-box;
+    border: 3px solid rgb(30, 30, 30);
+}
+
+.linkbio i {
+    font-size: 3em; 
+} 
+
+.linkbio h3 p {
+    font-size: 1.1em;
+}   
+.ld:hover :nth-child(1){
+color: rgb(10, 102, 194);
+transform: scale(1.02);
+}
+.i:hover :nth-child(1) {
+color: rgb(129, 52, 175); 
+transform: scale(1.02);
+} 
+.f:hover :nth-child(1) {
+color: rgb(66 103 178);
+transform: scale(1.02);
+} 
+.s:hover :nth-child(1) {
+color: rgb(30 215 96);
+transform: scale(1.02);  
+} 
+.ln:hover :nth-child(1){
+color: rgb(0, 185, 0);
+transform: scale(1.02);
+}
+.y:hover :nth-child(1) {
+color: rgb(255 0 0);
+transform: scale(1.02);
+} 
+.g:hover :nth-child(1) {
+color: rgb(0, 0, 0);
+transform: scale(1.02);
+} 
+.w:hover :nth-child(1) {
+color: rgb(236, 180, 74);
+transform: scale(1.02); 
+} 
+
+
+/* BIO GRID AREA */ 
+.ld {
+    grid-area: linkedin;
+}
+.i {
+    grid-area: instagram;
+}
+.f {
+    grid-area: facebook;
+}
+.s {
+    grid-area: spotify;
+} 
+.ln{
+    grid-area: chat;
+}
+.y {
+    grid-area: youtube;
+} 
+.g {
+    grid-area: github;
+}
+.w {
+    grid-area: website;
+} 
+
+/* Responsive */
+@media (max-width: 700px) {
+    .linkbio {
+        grid-template-areas: 
+        'linkedin'
+        'instagram' 
+        'facebook' 
+        'spotify'
+        'chat'
+        'youtube' 
+        'github' 
+        'website'; 
+    }
+}
+@media (max-width: 440px) {
+    .title {
+        font-size: 0.8em;
+    }
+    .linkbio h3 {
+        font-size: 0.9em;
+    }  
+    .linkbio p {
+        font-size: 0.8em;
+    }
+}
+@media (max-width: 360px) {
+    .title {
+        font-size: 0.7em;
+    } 
+    .linkbio h3 {
+        font-size: 0.8em;
+    }  
+    .linkbio p {
+        font-size: 0.7em;
+    }
+}
